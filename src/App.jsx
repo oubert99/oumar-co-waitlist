@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { joinWaitlist } from './lib/supabase'
 
-const CLOSE_UP_SRC = '/close-up-bg.jpg'
-const FRONT_SRC = '/front.png'
-const BACK_SRC = '/back.png'
+const asset = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
+
+const CLOSE_UP_SRC = asset('close-up-bg.jpg')
+const FRONT_SRC = asset('front.png')
+const BACK_SRC = asset('back.png')
+const LOGO_SRC = asset('logo-noir.png')
+const ABOUT_SRC = asset('FINAL FANTASY - 00000001.jpg')
 const INSTAGRAM_HANDLE = 'nooo.ooe'
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`
 
@@ -21,17 +25,16 @@ const PRODUCT_IMAGES = [
   FRONT_SRC,
   BACK_SRC,
   CLOSE_UP_SRC,
-  '/FINAL FANTASY - 00000001.jpg',
-  '/FINAL FANTASY - 00000012.jpg',
-  '/FINAL FANTASY - 00000004.jpg',
-  '/FINAL FANTASY - 00000005.jpg',
-  '/FINAL FANTASY - 00000006.jpg',
-  '/FINAL FANTASY - 00000007.jpg',
-  '/FINAL FANTASY - 00000008.jpg',
-  '/FINAL FANTASY - 00000009.jpg',
-  '/FINAL FANTASY - 00000010.jpg',
-  '/FINAL FANTASY - 00000011.jpg',
- 
+  ABOUT_SRC,
+  asset('FINAL FANTASY - 00000012.jpg'),
+  asset('FINAL FANTASY - 00000004.jpg'),
+  asset('FINAL FANTASY - 00000005.jpg'),
+  asset('FINAL FANTASY - 00000006.jpg'),
+  asset('FINAL FANTASY - 00000007.jpg'),
+  asset('FINAL FANTASY - 00000008.jpg'),
+  asset('FINAL FANTASY - 00000009.jpg'),
+  asset('FINAL FANTASY - 00000010.jpg'),
+  asset('FINAL FANTASY - 00000011.jpg'),
 ]
 
 const MARQUEE_SEQUENCE = [FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC]
@@ -681,7 +684,7 @@ function App() {
     >
       <img
         className={`logo${logoVisible ? ' visible' : ''}`}
-        src="/logo-noir.png"
+        src={LOGO_SRC}
         alt="OUMAR"
       />
 
@@ -755,7 +758,7 @@ function App() {
         <div className="about-page">
           <div className="about-layout">
             <div className="about-image">
-              <img src="/FINAL FANTASY - 00000001.jpg" alt="OUMAR Farmer Jacket" />
+              <img src={ABOUT_SRC} alt="OUMAR Farmer Jacket" />
             </div>
             <div className="about-content">
               <h1>OUMAR</h1>
