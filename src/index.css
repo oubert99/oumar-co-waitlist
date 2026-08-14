@@ -1123,7 +1123,8 @@ body:has(.view-terms) {
 
 .view-details .bottom-bar,
 .view-about .bottom-bar,
-.view-terms .bottom-bar {
+.view-terms .bottom-bar,
+.view-play .bottom-bar {
   display: none;
 }
 

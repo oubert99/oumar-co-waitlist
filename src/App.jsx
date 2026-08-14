@@ -851,22 +851,24 @@ function App() {
         Back
       </button>
 
-      <div className={`bottom-bar${barVisible ? ' visible' : ''}`}>
-        {formError && <p className="form-error">{formError}</p>}
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') submitEmail()
-          }}
-          disabled={submitting}
-        />
-        <button type="button" onClick={submitEmail} disabled={submitting}>
-          {submitting ? 'Joining…' : 'Join Waitlist'}
-        </button>
-      </div>
+      {!inPlayView && (
+        <div className={`bottom-bar${barVisible ? ' visible' : ''}`}>
+          {formError && <p className="form-error">{formError}</p>}
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') submitEmail()
+            }}
+            disabled={submitting}
+          />
+          <button type="button" onClick={submitEmail} disabled={submitting}>
+            {submitting ? 'Joining…' : 'Join Waitlist'}
+          </button>
+        </div>
+      )}
 
       <footer className="site-footer">
         <div className="footer-inner">
