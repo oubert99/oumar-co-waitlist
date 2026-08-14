@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUMAR — Jacket temperature mask</title>
+  <style>
+    :root {
+      --jacket-brightness: 1.1;
+      --jacket-temperature: 0.45;
+      --mask-top: 18%;
+      --mask-height: 100%;
+      --mask-soft: 0%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #171717;
+      background: #f4f4f4;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .sub {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 1.25rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      max-width: 1100px;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      position: sticky;
+      top: 1rem;
+    }
+
+    .panel label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin: 0.85rem 0 0.35rem;
+    }
+
+    .panel label:first-of-type {
+      margin-top: 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .row input[type='range'] {
+      flex: 1;
+    }
+
+    .val {
+      min-width: 3.2rem;
+      font-size: 0.75rem;
+      font-variant-numeric: tabular-nums;
+      color: #444;
+      text-align: right;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .code {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background: #f7f7f7;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.7rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      color: #222;
+    }
+
+    .previews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .card h2 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #555;
+    }
+
+    .jacket {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .jacket img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .jacket .base {
+      /* Unfiltered — hangers / area above mask stay natural */
+      filter: none;
+    }
+
+    .jacket .warm {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Brightness + temperature only inside the mask band */
+      filter: brightness(var(--jacket-brightness))
+        sepia(var(--jacket-temperature));
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent var(--mask-top),
+        #000 calc(var(--mask-top) + var(--mask-soft)),
+        #000 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent var(--mask-top),
+        #000 calc(var(--mask-top) + var(--mask-soft)),
+        #000 100%
+      );
+    }
+
+    .jacket.show-guide::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: var(--mask-top);
+      height: calc(100% - var(--mask-top));
+      border-top: 2px dashed rgba(255, 120, 40, 0.95);
+      background: rgba(255, 140, 40, 0.08);
+      pointer-events: none;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: #171717;
+      text-decoration: none;
+      border: 1px solid #e2e2e2;
+      background: #fff;
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+    }
+
+    a.back:hover {
+      background: #fafafa;
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        position: static;
+      }
+
+      .previews {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Jacket temperature mask</h1>
+  <p class="sub">
+    Adjust brightness, warmth, and the vertical mask. Copy the values when ready —
+    we’ll apply them on the main site.
+  </p>
+
+  <div class="layout">
+    <aside class="panel">
+      <label for="brightness">Brightness</label>
+      <div class="row">
+        <input id="brightness" type="range" min="0.6" max="1.8" step="0.01" value="1.1" />
+        <span class="val" id="brightness-val">1.10</span>
+      </div>
+
+      <label for="temperature">Temperature (sepia)</label>
+      <div class="row">
+        <input id="temperature" type="range" min="0" max="1" step="0.01" value="0.45" />
+        <span class="val" id="temperature-val">0.45</span>
+      </div>
+
+      <label for="mask-top">Mask top</label>
+      <div class="row">
+        <input id="mask-top" type="range" min="0" max="60" step="0.5" value="30" />
+        <span class="val" id="mask-top-val">30%</span>
+      </div>
+
+      <label for="mask-soft">Mask soft edge</label>
+      <div class="row">
+        <input id="mask-soft" type="range" min="0" max="20" step="0.5" value="6" />
+        <span class="val" id="mask-soft-val">6%</span>
+      </div>
+
+      <label class="toggle">
+        <input id="show-guide" type="checkbox" checked />
+        Show mask outline
+      </label>
+
+      <pre class="code" id="css-out"></pre>
+    </aside>
+
+    <div class="previews">
+      <div class="card">
+        <h2>Front</h2>
+        <div class="jacket show-guide" data-jacket>
+          <img class="base" src="/front.png" alt="Front jacket" />
+          <img class="warm" src="/front.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+      <div class="card">
+        <h2>Back</h2>
+        <div class="jacket show-guide" data-jacket>
+          <img class="base" src="/back.png" alt="Back jacket" />
+          <img class="warm" src="/back.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="back" href="/">← Back to site</a>
+
+  <script>
+    const root = document.documentElement
+    const jackets = () => document.querySelectorAll('[data-jacket]')
+
+    const fields = [
+      { id: 'brightness', css: '--jacket-brightness', fmt: (v) => Number(v).toFixed(2), unit: '' },
+      { id: 'temperature', css: '--jacket-temperature', fmt: (v) => Number(v).toFixed(2), unit: '' },
+      { id: 'mask-top', css: '--mask-top', fmt: (v) => Number(v).toFixed(1), unit: '%' },
+      { id: 'mask-soft', css: '--mask-soft', fmt: (v) => Number(v).toFixed(1), unit: '%' },
+    ]
+
+    const out = document.getElementById('css-out')
+    const guide = document.getElementById('show-guide')
+
+    function sync() {
+      const lines = [':root {']
+      for (const f of fields) {
+        const el = document.getElementById(f.id)
+        const shown = f.fmt(el.value)
+        const cssVal = shown + f.unit
+        root.style.setProperty(f.css, cssVal)
+        document.getElementById(f.id + '-val').textContent = cssVal || shown
+        lines.push(`  ${f.css}: ${cssVal || shown};`)
+      }
+      lines.push('}')
+      out.textContent = lines.join('\n')
+
+      jackets().forEach((j) => {
+        j.classList.toggle('show-guide', guide.checked)
+      })
+    }
+
+    fields.forEach((f) => {
+      document.getElementById(f.id).addEventListener('input', sync)
+    })
+    guide.addEventListener('change', sync)
+    sync()
+  </script>
+</body>
+</html>
