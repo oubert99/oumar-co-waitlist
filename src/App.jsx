@@ -11,6 +11,9 @@ const ABOUT_SRC = asset('FINAL FANTASY - 00000001.jpg')
 const INSTAGRAM_HANDLE = 'nooo.ooe'
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`
 
+// The product page is the landing page; the marquee lives on the Queue page.
+const HOME_VIEW = 'details'
+
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -614,10 +617,7 @@ function PlayGame({ onExit }) {
 function App() {
   const [logoVisible, setLogoVisible] = useState(false)
   const [barVisible, setBarVisible] = useState(false)
-  const [inPicturesView, setInPicturesView] = useState(false)
-  const [inPlayView, setInPlayView] = useState(false)
-  const [inAboutView, setInAboutView] = useState(false)
-  const [inTermsView, setInTermsView] = useState(false)
+  const [view, setView] = useState(HOME_VIEW)
   const [menuOpen, setMenuOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [modalOpen, setModalOpen] = useState(false)
@@ -625,9 +625,6 @@ function App() {
   const [formError, setFormError] = useState('')
   const [introDone, setIntroDone] = useState(false)
   const [bgZooming, setBgZooming] = useState(false)
-  const [splitVisible, setSplitVisible] = useState(true)
-
-  const inOverlay = inPicturesView || inPlayView || inAboutView || inTermsView
 
   useEffect(() => {
     const logoTimer = setTimeout(() => setLogoVisible(true), 400)
@@ -647,45 +644,14 @@ function App() {
     }
   }, [])
 
-  function openPictures() {
-    setInPlayView(false)
-    setInAboutView(false)
-    setInTermsView(false)
-    setInPicturesView(true)
+  function openView(next) {
+    setView(next)
     setMenuOpen(false)
+    window.scrollTo(0, 0)
   }
 
-  function openPlay() {
-    setInPicturesView(false)
-    setInAboutView(false)
-    setInTermsView(false)
-    setInPlayView(true)
-    setMenuOpen(false)
-  }
-
-  function openAbout() {
-    setInPicturesView(false)
-    setInPlayView(false)
-    setInTermsView(false)
-    setInAboutView(true)
-    setMenuOpen(false)
-  }
-
-  function openTerms() {
-    setInPicturesView(false)
-    setInPlayView(false)
-    setInAboutView(false)
-    setInTermsView(true)
-    setMenuOpen(false)
-  }
-
-  function goBack() {
-    setInPicturesView(false)
-    setInPlayView(false)
-    setInAboutView(false)
-    setInTermsView(false)
-    setSplitVisible(true)
-    setMenuOpen(false)
+  function goHome() {
+    openView(HOME_VIEW)
   }
 
   async function submitEmail() {
@@ -703,16 +669,7 @@ function App() {
   }
 
   return (
-    <div
-      className={[
-        inPicturesView ? 'view-details' : '',
-        inPlayView ? 'view-play' : '',
-        inAboutView ? 'view-about' : '',
-        inTermsView ? 'view-terms' : '',
-      ]
-        .filter(Boolean)
-        .join(' ') || undefined}
-    >
+    <div className={`view-${view}`}>
       <img
         className={`logo${logoVisible ? ' visible' : ''}`}
         src={LOGO_SRC}
@@ -720,13 +677,13 @@ function App() {
       />
 
       <nav className={`top-menu${logoVisible ? ' visible' : ''}`}>
-        <button type="button" onClick={openPictures}>
-          Details
+        <button type="button" onClick={() => openView('queue')}>
+          Queue
         </button>
-        <button type="button" onClick={openAbout}>
+        <button type="button" onClick={() => openView('about')}>
           About
         </button>
-        <button type="button" onClick={openPlay}>
+        <button type="button" onClick={() => openView('play')}>
           Play
         </button>
       </nav>
@@ -744,10 +701,10 @@ function App() {
 
       {menuOpen && (
         <div className="mobile-menu">
-          <button type="button" onClick={openPictures}>Details</button>
-          <button type="button" onClick={openAbout}>About</button>
-          <button type="button" onClick={openPlay}>Play</button>
-          <button type="button" onClick={goBack}>Home</button>
+          <button type="button" onClick={goHome}>Home</button>
+          <button type="button" onClick={() => openView('queue')}>Queue</button>
+          <button type="button" onClick={() => openView('about')}>About</button>
+          <button type="button" onClick={() => openView('play')}>Play</button>
         </div>
       )}
 
@@ -759,7 +716,7 @@ function App() {
         </div>
       )}
 
-      <div className={`marquee-stage${splitVisible && !inOverlay ? ' visible' : ''}`}>
+      <div className={`marquee-stage${view === 'queue' ? ' visible' : ''}`}>
         <div className="marquee-track">
           {[0, 1].map((copy) => (
             <div className="marquee-group" key={copy}>
@@ -775,7 +732,7 @@ function App() {
         </div>
       </div>
 
-      {inPicturesView && (
+      {view === HOME_VIEW && (
         <ProductPage
           email={email}
           setEmail={setEmail}
@@ -785,7 +742,7 @@ function App() {
         />
       )}
 
-      {inAboutView && (
+      {view === 'about' && (
         <div className="about-page">
           <div className="about-layout">
             <div className="about-image">
@@ -810,7 +767,7 @@ function App() {
         </div>
       )}
 
-      {inTermsView && (
+      {view === 'terms' && (
         <div className="terms-page">
           <h1>Terms & Conditions</h1>
           <p className="terms-updated">Last updated: August 2026</p>
@@ -866,9 +823,9 @@ function App() {
         </div>
       )}
 
-      {inPlayView && <PlayGame onExit={goBack} />}
+      {view === 'play' && <PlayGame onExit={goHome} />}
 
-      <button className="back-btn" type="button" onClick={goBack}>
+      <button className="back-btn" type="button" onClick={goHome}>
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -882,7 +839,7 @@ function App() {
         Back
       </button>
 
-      {!inPlayView && (
+      {view === 'queue' && (
         <div className={`bottom-bar${barVisible ? ' visible' : ''}`}>
           {formError && <p className="form-error">{formError}</p>}
           <input
@@ -913,7 +870,9 @@ function App() {
             @{INSTAGRAM_HANDLE}
           </a>
           <div className="footer-links">
-            <button type="button" onClick={openTerms}>Terms & Conditions</button>
+            <button type="button" onClick={() => openView('terms')}>
+              Terms & Conditions
+            </button>
           </div>
           <p className="footer-copy">© 2026 OUMAR. All rights reserved.</p>
         </div>

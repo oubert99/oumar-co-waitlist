@@ -201,14 +201,16 @@ body:has(.view-terms) {
   z-index: 0;
   display: flex;
   align-items: center;
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   background: transparent;
   overflow: hidden;
 }
 
 .marquee-stage.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -713,7 +715,7 @@ body:has(.view-terms) {
   height: 14px;
 }
 
-.view-details .back-btn,
+.view-queue .back-btn,
 .view-play .back-btn,
 .view-about .back-btn,
 .view-terms .back-btn {
@@ -736,16 +738,6 @@ body:has(.view-terms) {
 
 .view-play .logo {
   display: none;
-}
-
-.view-details .marquee-stage,
-.view-play .marquee-stage,
-.view-about .marquee-stage,
-.view-terms .marquee-stage {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: none;
 }
 
 .play-page {
@@ -1117,13 +1109,6 @@ body:has(.view-terms) {
 .bottom-bar.visible {
   transform: translateY(0);
   opacity: 1;
-}
-
-.view-details .bottom-bar,
-.view-about .bottom-bar,
-.view-terms .bottom-bar,
-.view-play .bottom-bar {
-  display: none;
 }
 
 .bottom-bar input {
