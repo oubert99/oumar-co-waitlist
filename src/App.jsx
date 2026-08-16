@@ -90,7 +90,7 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
         </div>
 
         <div className="product-info">
-          <h1>Farmer Jacket</h1>
+          <h1>Stiff™ Jacket</h1>
           <p className="product-price">295 €</p>
           <div className="product-color">
             <span className="product-swatch" aria-hidden="true" />

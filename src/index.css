@@ -376,6 +376,8 @@ body:has(.view-terms) {
   position: sticky;
   top: 5.5rem;
   min-width: 0;
+  z-index: 10;
+  align-self: start;
 }
 
 .product-thumbs {
@@ -1356,14 +1358,25 @@ body:has(.view-terms) {
 
   .product-layout {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
     gap: 1.25rem;
   }
 
+  .product-info {
+    order: 1;
+  }
+
+  .product-stage {
+    order: 2;
+  }
+
   .product-thumbs-col {
-    position: static;
+    position: relative;
     flex-direction: row;
     align-items: center;
     max-width: 100%;
+    width: 100%;
+    order: -1;
   }
 
   .product-thumbs {
@@ -1372,13 +1385,19 @@ body:has(.view-terms) {
     max-width: calc(100% - 36px);
     overflow-x: auto;
     overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .product-thumbs-more svg {
     transform: rotate(-90deg);
   }
 
-  .product-stage,
+  .product-stage {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+  }
+
   .product-stage img,
   .product-stage .jacket-art,
   .product-stage .jacket-art .jacket-base,
@@ -1387,16 +1406,24 @@ body:has(.view-terms) {
     max-width: 100%;
     height: auto;
     min-height: 0;
-    max-height: 70vh;
+    max-height: 60vh;
     object-fit: contain;
   }
 
   .product-page {
-    padding: 0.75rem 0.85rem 2rem;
+    padding: 0.75rem 1rem 2rem;
   }
 
   .about-page {
     padding: 0.75rem 1rem 2rem;
+  }
+
+  .product-info h1 {
+    font-size: 1.45rem;
+  }
+
+  .product-price {
+    font-size: 1.05rem;
   }
 
   .about-layout {
@@ -1457,11 +1484,23 @@ body:has(.view-terms) {
     width: 90%;
     padding: 2rem 1.5rem;
   }
+
+  .modal-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-actions button,
+  .modal-actions .modal-follow {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .product-layout {
     grid-template-columns: 64px minmax(0, 1fr);
+    max-width: 100%;
   }
 
   .product-info {
@@ -1470,6 +1509,13 @@ body:has(.view-terms) {
 
   .about-layout {
     gap: 2rem;
+  }
+
+  .product-stage img,
+  .product-stage .jacket-art,
+  .product-stage .jacket-art .jacket-base,
+  .product-stage .jacket-art .jacket-warm {
+    max-height: 65vh;
   }
 }
 
@@ -1491,6 +1537,10 @@ body:has(.view-terms) {
     transform: rotateY(180deg);
   }
 
+  .bottom-bar {
+    padding: 0.85rem;
+  }
+
   .bottom-bar input {
     font-size: 0.8rem;
     padding: 0.5rem 0.8rem;
@@ -1499,5 +1549,30 @@ body:has(.view-terms) {
   .bottom-bar button {
     font-size: 0.75rem;
     padding: 0.5rem 0.9rem;
+  }
+
+  .logo {
+    height: 56px;
+  }
+
+  .product-thumb {
+    width: 56px;
+    height: 70px;
+  }
+
+  .product-info h1 {
+    font-size: 1.35rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .terms-page h1 {
+    font-size: 1.45rem;
+  }
+
+  .about-content h1 {
+    font-size: 1.25rem;
   }
 }
