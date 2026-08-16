@@ -355,7 +355,6 @@ body:has(.view-terms) {
   min-height: 100vh;
   background: #fff;
   padding: 1rem 1.5rem 2rem;
-  overflow-x: hidden;
 }
 
 .product-layout {
@@ -373,10 +372,7 @@ body:has(.view-terms) {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  position: sticky;
-  top: 5.5rem;
   min-width: 0;
-  z-index: 10;
   align-self: start;
 }
 
@@ -384,9 +380,10 @@ body:has(.view-terms) {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: min(68vh, 640px);
+  max-height: min(62vh, 560px);
   overflow-y: auto;
   overflow-x: hidden;
+  overscroll-behavior: contain;
   scrollbar-width: none;
   padding: 2px;
 }
@@ -594,7 +591,6 @@ body:has(.view-terms) {
   min-height: 100vh;
   background: #fff;
   padding: 1rem 2rem 2rem;
-  overflow-x: hidden;
 }
 
 .about-layout {
@@ -1358,25 +1354,27 @@ body:has(.view-terms) {
 
   .product-layout {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto auto;
-    gap: 1.25rem;
-  }
-
-  .product-info {
-    order: 1;
+    gap: 1rem;
   }
 
   .product-stage {
-    order: 2;
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
   }
 
   .product-thumbs-col {
-    position: relative;
     flex-direction: row;
     align-items: center;
     max-width: 100%;
     width: 100%;
-    order: -1;
+    order: 2;
+  }
+
+  .product-info {
+    order: 3;
+    padding-top: 0;
   }
 
   .product-thumbs {
@@ -1390,12 +1388,6 @@ body:has(.view-terms) {
 
   .product-thumbs-more svg {
     transform: rotate(-90deg);
-  }
-
-  .product-stage {
-    width: 100%;
-    max-width: 100%;
-    min-height: 0;
   }
 
   .product-stage img,

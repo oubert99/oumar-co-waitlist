@@ -50,8 +50,39 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
   const thumbsRef = useRef(null)
   const src = PRODUCT_IMAGES[active]
 
+  // The strip scrolls vertically on desktop and horizontally on mobile. When the
+  // viewport flips between the two, a leftover offset can land past the content
+  // and leave the strip looking empty.
+  useEffect(() => {
+    const el = thumbsRef.current
+    if (!el) return
+
+    function clampScroll() {
+      el.scrollTop = Math.min(el.scrollTop, el.scrollHeight - el.clientHeight)
+      el.scrollLeft = Math.min(el.scrollLeft, el.scrollWidth - el.clientWidth)
+    }
+
+    window.addEventListener('resize', clampScroll)
+    window.addEventListener('orientationchange', clampScroll)
+    return () => {
+      window.removeEventListener('resize', clampScroll)
+      window.removeEventListener('orientationchange', clampScroll)
+    }
+  }, [])
+
   function scrollThumbs() {
-    thumbsRef.current?.scrollBy({ top: 140, left: 140, behavior: 'smooth' })
+    const el = thumbsRef.current
+    if (!el) return
+
+    const vertical = el.scrollHeight > el.clientHeight
+    const max = vertical
+      ? el.scrollHeight - el.clientHeight
+      : el.scrollWidth - el.clientWidth
+    const current = vertical ? el.scrollTop : el.scrollLeft
+    const step = (vertical ? el.clientHeight : el.clientWidth) * 0.8
+    const next = current + step >= max - 1 ? 0 : current + step
+
+    el.scrollTo({ [vertical ? 'top' : 'left']: next, behavior: 'smooth' })
   }
 
   return (
