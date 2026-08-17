@@ -205,11 +205,12 @@ body:has(.view-terms) {
 .about-marquee .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 80s linear infinite;
 }
 
 .about-marquee .marquee-group {
   display: flex;
+  flex-shrink: 0;
   gap: 0.65rem;
   padding-right: 0.65rem;
 }
@@ -325,7 +326,7 @@ body:has(.view-terms) {
   }
 
   .about-marquee .marquee-track {
-    animation-duration: 28s;
+    animation-duration: 56s;
   }
 
   .about-marquee .marquee-item:hover .marquee-card {
@@ -1452,7 +1453,7 @@ body:has(.view-terms) {
   }
 
   .about-marquee .marquee-track {
-    animation-duration: 28s;
+    animation-duration: 56s;
   }
 
   .about-marquee .marquee-item:hover .marquee-card {

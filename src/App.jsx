@@ -183,13 +183,20 @@ function JacketArt({ src, imgKey }) {
   )
 }
 
+const MARQUEE_COPIES = 4
+
 function JacketMarquee() {
+  const cards = Array.from(
+    { length: MARQUEE_SEQUENCE.length * MARQUEE_COPIES },
+    (_, i) => MARQUEE_SEQUENCE[i % MARQUEE_SEQUENCE.length],
+  )
+
   return (
     <div className="about-marquee">
       <div className="marquee-track">
         {[0, 1].map((copy) => (
           <div className="marquee-group" key={copy}>
-            {MARQUEE_SEQUENCE.map((src, i) => (
+            {cards.map((src, i) => (
               <MarqueeCard
                 key={`${copy}-${i}`}
                 frontSrc={src}
