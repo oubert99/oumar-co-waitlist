@@ -11,7 +11,6 @@ const ABOUT_SRC = asset('FINAL FANTASY - 00000001.jpg')
 const INSTAGRAM_HANDLE = 'nooo.ooe'
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`
 
-// The product page is the landing page; the marquee lives on the Queue page.
 const HOME_VIEW = 'details'
 
 function InstagramIcon() {
@@ -120,7 +119,16 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
         <div
           className={`product-stage${src === FRONT_SRC || src === BACK_SRC ? ' studio' : ' look'}`}
         >
-          <ProductMedia src={src} />
+          <img
+            className="product-stage-sizer"
+            src={FRONT_SRC}
+            alt=""
+            aria-hidden="true"
+            draggable={false}
+          />
+          <div className="product-stage-media">
+            <ProductMedia src={src} />
+          </div>
         </div>
 
         <div className="product-info">
@@ -172,6 +180,26 @@ function JacketArt({ src, imgKey }) {
         draggable={false}
       />
     </span>
+  )
+}
+
+function JacketMarquee() {
+  return (
+    <div className="about-marquee">
+      <div className="marquee-track">
+        {[0, 1].map((copy) => (
+          <div className="marquee-group" key={copy}>
+            {MARQUEE_SEQUENCE.map((src, i) => (
+              <MarqueeCard
+                key={`${copy}-${i}`}
+                frontSrc={src}
+                backSrc={src === FRONT_SRC ? BACK_SRC : FRONT_SRC}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -616,7 +644,6 @@ function PlayGame({ onExit }) {
 
 function App() {
   const [logoVisible, setLogoVisible] = useState(false)
-  const [barVisible, setBarVisible] = useState(false)
   const [view, setView] = useState(HOME_VIEW)
   const [menuOpen, setMenuOpen] = useState(false)
   const [email, setEmail] = useState('')
@@ -628,7 +655,6 @@ function App() {
 
   useEffect(() => {
     const logoTimer = setTimeout(() => setLogoVisible(true), 400)
-    const barTimer = setTimeout(() => setBarVisible(true), 1400)
     const zoomTimer = setTimeout(() => {
       setBgZooming(true)
     }, 900)
@@ -638,7 +664,6 @@ function App() {
 
     return () => {
       clearTimeout(logoTimer)
-      clearTimeout(barTimer)
       clearTimeout(zoomTimer)
       clearTimeout(hideBgTimer)
     }
@@ -677,9 +702,6 @@ function App() {
       />
 
       <nav className={`top-menu${logoVisible ? ' visible' : ''}`}>
-        <button type="button" onClick={() => openView('queue')}>
-          Queue
-        </button>
         <button type="button" onClick={() => openView('about')}>
           About
         </button>
@@ -702,7 +724,6 @@ function App() {
       {menuOpen && (
         <div className="mobile-menu">
           <button type="button" onClick={goHome}>Home</button>
-          <button type="button" onClick={() => openView('queue')}>Queue</button>
           <button type="button" onClick={() => openView('about')}>About</button>
           <button type="button" onClick={() => openView('play')}>Play</button>
         </div>
@@ -716,22 +737,6 @@ function App() {
         </div>
       )}
 
-      <div className={`marquee-stage${view === 'queue' ? ' visible' : ''}`}>
-        <div className="marquee-track">
-          {[0, 1].map((copy) => (
-            <div className="marquee-group" key={copy}>
-              {MARQUEE_SEQUENCE.map((src, i) => (
-                <MarqueeCard
-                  key={`${copy}-${i}`}
-                  frontSrc={src}
-                  backSrc={src === FRONT_SRC ? BACK_SRC : FRONT_SRC}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-
       {view === HOME_VIEW && (
         <ProductPage
           email={email}
@@ -744,6 +749,7 @@ function App() {
 
       {view === 'about' && (
         <div className="about-page">
+          <JacketMarquee />
           <div className="about-layout">
             <div className="about-image">
               <img src={ABOUT_SRC} alt="OUMAR Farmer Jacket" />
@@ -838,25 +844,6 @@ function App() {
         </svg>
         Back
       </button>
-
-      {view === 'queue' && (
-        <div className={`bottom-bar${barVisible ? ' visible' : ''}`}>
-          {formError && <p className="form-error">{formError}</p>}
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') submitEmail()
-            }}
-            disabled={submitting}
-          />
-          <button type="button" onClick={submitEmail} disabled={submitting}>
-            {submitting ? 'Joining…' : 'Join Waitlist'}
-          </button>
-        </div>
-      )}
 
       <footer className="site-footer">
         <div className="footer-inner">
