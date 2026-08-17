@@ -598,9 +598,8 @@ body:has(.view-terms) {
   z-index: 1;
   width: 100%;
   max-width: 100%;
-  min-height: 100vh;
   background: #fff;
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 2rem 1.25rem;
   overflow-x: hidden;
 }
 
@@ -624,7 +623,8 @@ body:has(.view-terms) {
   height: auto;
   display: block;
   object-fit: contain;
-  border-radius: 2px;
+  border-radius: 6px;
+
 }
 
 .about-content {
@@ -1324,7 +1324,7 @@ body:has(.view-terms) {
   }
 
   .about-page {
-    padding: 0.75rem 1rem 2rem;
+    padding: 0.75rem 1rem 1rem;
   }
 
   .about-marquee {
