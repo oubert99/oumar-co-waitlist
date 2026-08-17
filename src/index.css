@@ -608,7 +608,7 @@ body:has(.view-terms) {
   max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
   gap: 3rem;
   align-items: start;
 }
@@ -620,7 +620,7 @@ body:has(.view-terms) {
 
 .about-image img {
   width: 100%;
-  max-width: 100%;
+  max-width: 240px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -1346,6 +1346,15 @@ body:has(.view-terms) {
     gap: 1.5rem;
   }
 
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 180px;
+  }
+
   .about-content h1 {
     font-size: 1.35rem;
   }
@@ -1423,7 +1432,12 @@ body:has(.view-terms) {
   }
 
   .about-layout {
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
     gap: 2rem;
+  }
+
+  .about-image img {
+    max-width: 200px;
   }
 
   .product-stage-sizer {
