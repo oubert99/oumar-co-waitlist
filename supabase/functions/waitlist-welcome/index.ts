@@ -7,7 +7,7 @@ const cors = {
 }
 
 const WAITLIST_ID = 3
-const SENDER = { name: 'OUMAR', email: 'oumar.ka60@gmail.com' }
+const SENDER = { name: 'OUMAR', email: 'hola@oumar.co' }
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -48,9 +48,20 @@ async function notifyBrevo(apiKey: string, email: string) {
       htmlContent: `<!DOCTYPE html>
 <html>
   <body style="margin:0;padding:32px 20px;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#171717;">
-    <p style="margin:0 0 16px;font-size:16px;">Thanks for subscribing.</p>
-    <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">We'll keep you posted when the Stiff™ Jacket is ready.</p>
-    <p style="margin:24px 0 0;font-size:14px;color:#888;">OUMAR</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:560px;margin:0 auto;">
+      <tr>
+        <td>
+          <img src="https://oumar.co/newsletter-jacket.jpg" alt="Stiff Jacket" width="560" style="display:block;width:100%;max-width:560px;height:auto;border:0;outline:none;text-decoration:none;" />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:24px 4px 0;font-size:16px;line-height:1.6;color:#171717;">
+          <p style="margin:0 0 16px;">Thanks for subscribing.</p>
+          <p style="margin:0 0 16px;">We'll keep you posted when the Stiff™ Jacket is ready.</p>
+          <p style="margin:24px 0 0;font-size:14px;color:#888;">OUMAR</p>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>`,
       textContent:
