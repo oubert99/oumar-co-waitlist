@@ -51,7 +51,7 @@ async function notifyBrevo(apiKey: string, email: string) {
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:560px;margin:0 auto;">
       <tr>
         <td>
-          <img src="https://oumar.co/newsletter-jacket.jpg" alt="Stiff Jacket" width="560" style="display:block;width:100%;max-width:560px;height:auto;border:0;outline:none;text-decoration:none;" />
+          <img src="https://oumar.co/newsletter-jacket.jpg" alt="Stiff Jacket" width="260" style="display:block;width:100%;max-width:260px;height:auto;border:0;outline:none;text-decoration:none;" />
         </td>
       </tr>
       <tr>
