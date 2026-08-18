@@ -763,12 +763,14 @@ function App() {
             </div>
             <div className="about-content">
               <p>
-                <img className="about-inline-logo" src={LOGO_SRC} alt="OUMAR" />
-                {' '}is a fashion brand with a strong focus on craftmanship, shape
+                <span className="about-inline-logo">
+                  <img src={LOGO_SRC} alt="OUMAR" />
+                </span>
+                is a fashion brand with a strong focus on craftmanship, shape
                 and fit.
               </p>
               <p>
-                I'm launching my very first piece: the signature Stiff™ Jacket,
+                We are launching the very first piece: the signature Stiff™ Jacket,
                 which is an alternative to the classic blazer jacket from the
                 XIXth century.
               </p>
