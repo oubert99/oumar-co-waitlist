@@ -763,9 +763,11 @@ function App() {
             </div>
             <div className="about-content">
               <p>
-                <span className="about-inline-logo">
-                  <img src={LOGO_SRC} alt="OUMAR" />
-                </span>
+                <img
+                  className="about-inline-logo"
+                  src={asset('logo-inline.png')}
+                  alt="OUMAR"
+                />{' '}
                 is a fashion brand with a strong focus on craftmanship, shape
                 and fit.
               </p>

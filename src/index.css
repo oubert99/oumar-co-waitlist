@@ -633,30 +633,18 @@ body:has(.view-terms) {
 }
 
 .about-inline-logo {
-  display: inline-block;
-  position: relative;
-  height: 1.05em;
-  width: 3.7em;
-  overflow: hidden;
-  vertical-align: -0.16em;
-  margin: 0 0.12em 0 0;
-}
-
-.about-inline-logo img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 520%;
+  height: 1em;
   width: auto;
-  max-width: none;
-  transform: translate(-50%, -50%);
+  display: inline;
+  vertical-align: -0.08em;
+  margin-right: 0.15em;
 }
 
 .about-content p {
   font-size: 0.95rem;
-  line-height: 1.75;
+  line-height: 1.55;
   color: #333;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .about-sig {
