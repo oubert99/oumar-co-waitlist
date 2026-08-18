@@ -762,19 +762,15 @@ function App() {
               <img src={ABOUT_SRC} alt="OUMAR Farmer Jacket" />
             </div>
             <div className="about-content">
-              <h1>OUMAR</h1>
+              <h1>
+                <img src={LOGO_SRC} alt="OUMAR" />
+              </h1>
               <p>
-                Founded on the principle that clothing should be both timeless and
-                intentional, OUMAR creates garments rooted in craftsmanship and
-                modern sensibility. Each piece is designed to live beyond seasons —
-                considered, minimal, and made to be worn for years.
+Fashion brand with a strong focus on craftmanship, shape and fit. 
+
+                I'm launching my very first piece: the signature Stiff™ Jacket, which is an alternative to the classic blazer jacket from the XIXth century.
               </p>
-              <p>
-                The Farmer Jacket is our debut piece: 100% cotton, collarless,
-                cropped to the waist. Inspired by workwear silhouettes reimagined
-                through a contemporary lens.
-              </p>
-              <p className="about-sig">Paris, 2026</p>
+              <p className="about-sig">Somewhere in France, 2026</p>
             </div>
           </div>
         </div>

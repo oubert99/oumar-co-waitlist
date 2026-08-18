@@ -633,10 +633,14 @@ body:has(.view-terms) {
 }
 
 .about-content h1 {
-  font-size: 1.65rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.25rem;
+  line-height: 0;
+}
+
+.about-content h1 img {
+  display: block;
+  height: 56px;
+  width: auto;
 }
 
 .about-content p {
@@ -1356,8 +1360,8 @@ body:has(.view-terms) {
     max-width: 180px;
   }
 
-  .about-content h1 {
-    font-size: 1.35rem;
+  .about-content h1 img {
+    height: 48px;
   }
 
   .about-content p {
@@ -1485,7 +1489,7 @@ body:has(.view-terms) {
     font-size: 1.45rem;
   }
 
-  .about-content h1 {
-    font-size: 1.25rem;
+  .about-content h1 img {
+    height: 44px;
   }
 }
