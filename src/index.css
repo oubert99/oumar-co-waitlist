@@ -632,15 +632,11 @@ body:has(.view-terms) {
   padding-top: 1rem;
 }
 
-.about-content h1 {
-  margin: 0 0 1.25rem;
-  line-height: 0;
-}
-
-.about-content h1 img {
-  display: block;
-  height: 56px;
+.about-inline-logo {
+  display: inline-block;
+  height: 1.15em;
   width: auto;
+  vertical-align: -0.18em;
 }
 
 .about-content p {
@@ -1360,10 +1356,6 @@ body:has(.view-terms) {
     max-width: 180px;
   }
 
-  .about-content h1 img {
-    height: 48px;
-  }
-
   .about-content p {
     font-size: 0.9rem;
   }
@@ -1489,7 +1481,4 @@ body:has(.view-terms) {
     font-size: 1.45rem;
   }
 
-  .about-content h1 img {
-    height: 44px;
-  }
 }

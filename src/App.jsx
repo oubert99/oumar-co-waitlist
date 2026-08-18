@@ -762,13 +762,15 @@ function App() {
               <img src={ABOUT_SRC} alt="OUMAR Farmer Jacket" />
             </div>
             <div className="about-content">
-              <h1>
-                <img src={LOGO_SRC} alt="OUMAR" />
-              </h1>
               <p>
-Fashion brand with a strong focus on craftmanship, shape and fit. 
-
-                I'm launching my very first piece: the signature Stiff™ Jacket, which is an alternative to the classic blazer jacket from the XIXth century.
+                <img className="about-inline-logo" src={LOGO_SRC} alt="OUMAR" />
+                {' '}is a fashion brand with a strong focus on craftmanship, shape
+                and fit.
+              </p>
+              <p>
+                I'm launching my very first piece: the signature Stiff™ Jacket,
+                which is an alternative to the classic blazer jacket from the
+                XIXth century.
               </p>
               <p className="about-sig">Somewhere in France, 2026</p>
             </div>
