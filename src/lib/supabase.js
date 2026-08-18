@@ -14,16 +14,12 @@ export async function joinWaitlist(rawEmail) {
     return { ok: false, error: 'Enter a valid email' }
   }
 
-  const { data, error } = await supabase.functions.invoke('waitlist-welcome', {
-    body: { email },
-  })
+  const { error } = await supabase.from('waitlist').insert({ email })
 
   if (error) {
+    if (error.code === '23505') return { ok: true, duplicate: true }
     return { ok: false, error: 'Could not join the waitlist. Try again.' }
   }
-  if (data?.ok === false) {
-    return { ok: false, error: data.error || 'Could not join the waitlist. Try again.' }
-  }
 
-  return { ok: true, duplicate: Boolean(data?.duplicate) }
+  return { ok: true, duplicate: false }
 }

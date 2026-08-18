@@ -31,8 +31,7 @@ async function notifyBrevo(apiKey: string, email: string) {
     }),
   })
   if (!contactRes.ok && contactRes.status !== 204) {
-    const text = await contactRes.text()
-    console.error('brevo contact', contactRes.status, text)
+    throw new Error(`brevo contact ${contactRes.status} ${await contactRes.text()}`)
   }
 
   const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -59,8 +58,7 @@ async function notifyBrevo(apiKey: string, email: string) {
     }),
   })
   if (!emailRes.ok) {
-    const text = await emailRes.text()
-    console.error('brevo email', emailRes.status, text)
+    throw new Error(`brevo email ${emailRes.status} ${await emailRes.text()}`)
   }
 }
 
@@ -71,29 +69,11 @@ Deno.serve(async (req) => {
 
   try {
     const payload = await req.json()
-    const email = String(payload?.email || '').trim().toLowerCase()
+    const email = String(payload?.email || payload?.record?.email || '')
+      .trim()
+      .toLowerCase()
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return json({ ok: false, error: 'Enter a valid email' }, 400)
-    }
-
-    const supabase = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-      {
-        global: {
-          headers: { Authorization: req.headers.get('Authorization') ?? '' },
-        },
-      },
-    )
-
-    const { error } = await supabase.from('waitlist').insert({ email })
-    if (error) {
-      if (error.code === '23505') return json({ ok: true, duplicate: true })
-      console.error('waitlist insert', error)
-      return json(
-        { ok: false, error: 'Could not join the waitlist. Try again.' },
-        500,
-      )
     }
 
     const admin = createClient(
@@ -103,14 +83,17 @@ Deno.serve(async (req) => {
     const { data: apiKey, error: keyError } = await admin.rpc(
       'get_brevo_api_key',
     )
-    if (keyError) console.error('brevo key', keyError)
-    else if (apiKey) await notifyBrevo(String(apiKey), email)
+    if (keyError || !apiKey) {
+      console.error('brevo key', keyError)
+      return json({ ok: false, error: 'Welcome email is not configured.' }, 500)
+    }
 
-    return json({ ok: true, duplicate: false })
+    await notifyBrevo(String(apiKey), email)
+    return json({ ok: true })
   } catch (err) {
     console.error('waitlist-welcome', err)
     return json(
-      { ok: false, error: 'Could not join the waitlist. Try again.' },
+      { ok: false, error: 'Could not send the welcome email.' },
       500,
     )
   }
