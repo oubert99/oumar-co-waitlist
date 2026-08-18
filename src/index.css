@@ -634,9 +634,9 @@ body:has(.view-terms) {
 
 .about-inline-logo {
   display: inline-block;
-  height: 1.15em;
+  height: 5em;
   width: auto;
-  vertical-align: -0.18em;
+  vertical-align: middle;
 }
 
 .about-content p {
