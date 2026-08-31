@@ -1,0 +1,823 @@
+{
+  "source": "https://miroirsdesign.fr",
+  "fetched_at": "2026-08-31T13:24:49Z",
+  "style": "vintage luxury",
+  "filter": "Live catalog is 52 unique mirrors. Kept only pieces that clearly match vintage luxury: Baroque Louis XV gilt, 18th-century triple-arch gilt, Venetian engraved floral, and gold/black arched vanity triptychs. Skipped organic/molten blobs, LED bathroom gadgets, rattan boho, adhesive tiles, Crittall industrial grids, and anything doubtful.",
+  "live_product_count": 52,
+  "count": 6,
+  "image_count": 49,
+  "skipped_notable": [
+    {
+      "handle": "demi-miroir-rond-led-retroeclaire",
+      "reason": "Contemporary LED backlit half-moon — not vintage."
+    },
+    {
+      "handle": "grand-miroir-design-dore-sculptural",
+      "reason": "Molten/wavy sculptural gold — contemporary organic glam."
+    },
+    {
+      "handle": "miroir-moderne-sculptural-cadre-ondule",
+      "reason": "Irregular organic gold blob — contemporary, not period vintage."
+    },
+    {
+      "handle": "miroir-argente-cadre-chrome-effet-metal-liquide",
+      "reason": "Liquid-metal chrome — avant-garde contemporary."
+    },
+    {
+      "handle": "miroir-cadre-dore-sculpte-led-grand-format",
+      "reason": "Organic hammered gold with LED halo — contemporary."
+    },
+    {
+      "handle": "miroir-dentree-cadre-sculptural-3d-laque-brillant",
+      "reason": "High-gloss liquid-gold organic frame — contemporary."
+    },
+    {
+      "handle": "miroir-mural-led-bluetooth-antibuee-avec-enceinte",
+      "reason": "Bathroom LED + Bluetooth speaker — gadget, not vintage."
+    },
+    {
+      "handle": "miroir-salle-de-bain-arche-led-tactile-cadre-dore-60-90-cm",
+      "reason": "Slim gold arch with LED touch controls — modern bathroom fixture."
+    },
+    {
+      "handle": "miroir-fleur-rotin-tresse-main-design-floral-o40-cm",
+      "reason": "Rattan flower/sunburst — boho, not vintage luxury."
+    },
+    {
+      "handle": "miroir-adhesif-mural-motif-branches",
+      "reason": "Cheap adhesive wall tiles."
+    },
+    {
+      "handle": "miroir-mural-verriere-arche-fer-forge-noir",
+      "reason": "Crittall/industrial black grid — modern industrial, not vintage luxury."
+    }
+  ],
+  "failures": [],
+  "products": [
+    {
+      "source_handle": "miroir-mural-baroque-louis-xv-finition-doree-sculptee",
+      "source_url": "https://miroirsdesign.fr/products/miroir-mural-baroque-louis-xv-finition-doree-sculptee",
+      "title": "Miroir Mural Baroque Louis XV — Finition Dorée Sculptée",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Title"
+      ],
+      "variants": [
+        {
+          "id": 57777845043548,
+          "title": "Default Title",
+          "price": "189.90",
+          "compare_at_price": "",
+          "sku": "",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 42500,
+          "weight": 42.5,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<p><strong>Une noblesse intemporelle, façonnée à la main</strong></p>\n<p>Les moulures ornées, volutes et perles en chapelet de ce miroir sont façonnées à la main par des artisans, dans le plus pur esprit du style Louis XV. Le <strong>miroir mural baroque Louis XV finition dorée sculptée</strong> est un véritable objet d'art autant qu'un miroir mural décoratif, pensé pour être la pièce que l'on remarque en premier dans la pièce.</p>\n<p>Il pèse 19 kg, un poids qui témoigne de la densité et de la qualité de la sculpture plutôt que d'une simple façade légère. Cette masse impose une réflexion sérieuse sur le point de fixation, mais garantit en retour une présence et une stabilité visuelle rares.</p>\n<p>Il se pose aussi bien en portrait qu'en paysage, idéal au salon, en chambre ou à l'entrée selon l'ampleur du mur disponible. Pour d'autres pièces à la dorure sculptée, notre sélection <a href=\"https://miroirsdesign.fr/collections/miroir-mural-dore\" title=\"collection miroir mural dore\">miroir mural doré</a> réunit des finitions comparables.</p>\n<h3>Ce qu'il faut savoir avant d'installer ce miroir</h3>\n<p>Le poids de 19 kg impose impérativement un mur porteur et des fixations professionnelles dimensionnées pour cette charge, ce n'est pas un miroir à accrocher sur une simple cheville de cloison creuse. Prévoyez également au moins deux personnes pour la manutention lors de l'installation.</p>\n<p>Pour d'autres pièces destinées au salon, notre catégorie <a href=\"https://miroirsdesign.fr/collections/miroir-mural-salon\" title=\"collection miroir mural salon\">miroir mural salon</a> propose un choix complémentaire.</p>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.jpg",
+          "path": "images/miroir-mural-baroque-louis-xv-finition-doree-sculptee/01.jpg",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_Baroque_Louis_XV_Finition_Dor_e_Sculpt_e.jpg?v=1781022582",
+          "bytes": 406534,
+          "content_type": "image/jpeg",
+          "width": 2048,
+          "height": 2048,
+          "alt": "Miroir Mural Baroque Louis XV, Finition Dorée Sculptée dans un salon et en finition dorée"
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-mural-baroque-louis-xv-finition-doree-sculptee/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_Baroque_Louis_XV_Finition_Dor_e_Sculpt_e.png?v=1788107797",
+          "bytes": 1982468,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir mural baroque Louis XV doré et sculpté installé au-dessus d’une cheminée blanche"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-mural-baroque-louis-xv-finition-doree-sculptee/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Angle_dor_sculpt_du_miroir_mural_Louis_XV.png?v=1788107335",
+          "bytes": 2438706,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Angle sculpté d’un miroir mural baroque Louis XV avec moulures florales et finition dorée"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-mural-baroque-louis-xv-finition-doree-sculptee/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Fronton_sculpt_du_miroir_baroque_Louis_XV_dor.png?v=1788107306",
+          "bytes": 2025523,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Détail du fronton sculpté d’un miroir mural baroque Louis XV en finition dorée vieillie"
+        }
+      ],
+      "published_at": "2026-06-01T22:36:17+02:00",
+      "created_at": "2026-06-01T22:26:41+02:00",
+      "updated_at": "2026-08-31T15:24:38+02:00"
+    },
+    {
+      "source_handle": "miroir-dore-du-xviiie-triple-arche-110-180-cm",
+      "source_url": "https://miroirsdesign.fr/products/miroir-dore-du-xviiie-triple-arche-110-180-cm",
+      "title": "Miroir Doré du XVIIIe Triple Arche 110×180 cm",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Title"
+      ],
+      "variants": [
+        {
+          "id": 58534305628508,
+          "title": "Default Title",
+          "price": "1290.90",
+          "compare_at_price": "762.95",
+          "sku": "14:350686#100 160CM",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 15000,
+          "weight": 15.0,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<div class=\"detailmodule_html\">\n<div class=\"detail-desc-decorate-richtext\">\n<meta charset=\"utf-8\">\n<span>Héritage des grandes demeures françaises du XVIIIe, Ce miroir </span><span>reprend les codes du trumeau classique avec son cadre à </span><strong>triple arcature en résine sculptée</strong><span>, finition dorée vieillie et moulures de feuilles d'acanthe. Format pleine longueur 110×180 cm. Pose au sol. S'intègre dans les intérieurs classiques comme dans les lofts industriels contemporains.</span>\n</div>\n</div>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/01.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Escalier.png?v=1786714583",
+          "bytes": 2159541,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": " Miroir Trumeau Doré Triple Arche 110×180 cm Escalier"
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Salon.png?v=1786714363",
+          "bytes": 1958951,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Salon"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Zoom.png?v=1786714376",
+          "bytes": 1782398,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Zoom"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Zoom_Bas.png?v=1786714398",
+          "bytes": 2124426,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Zoom Bas"
+        },
+        {
+          "index": 5,
+          "filename": "05.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/05.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Comparaison_Taille.png?v=1786714422",
+          "bytes": 2322741,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Comparaison Taille"
+        },
+        {
+          "index": 6,
+          "filename": "06.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/06.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Canape.png?v=1786714483",
+          "bytes": 2560545,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Canape"
+        },
+        {
+          "index": 7,
+          "filename": "07.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/07.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Couloir.png?v=1786714531",
+          "bytes": 1983227,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Trumeau Doré Triple Arche 110×180 cm Couloir\n"
+        },
+        {
+          "index": 8,
+          "filename": "08.png",
+          "path": "images/miroir-dore-du-xviiie-triple-arche-110-180-cm/08.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Trumeau_Dor_Triple_Arche_110_180_cm_Chambre.png?v=1786714567",
+          "bytes": 2047610,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": " Miroir Trumeau Doré Triple Arche 110×180 cm Chambre"
+        }
+      ],
+      "published_at": "2026-08-26T19:23:13+02:00",
+      "created_at": "2026-08-03T15:48:15+02:00",
+      "updated_at": "2026-08-31T15:24:38+02:00"
+    },
+    {
+      "source_handle": "miroir-vintage-triptyque-dore-coiffeuse",
+      "source_url": "https://miroirsdesign.fr/products/miroir-vintage-triptyque-dore-coiffeuse",
+      "title": "Miroir Vintage Triptyque Doré Coiffeuse",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Title"
+      ],
+      "variants": [
+        {
+          "id": 58482704220508,
+          "title": "Default Title",
+          "price": "1190.90",
+          "compare_at_price": "514.38",
+          "sku": "14:371#75 100CM",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 7000,
+          "weight": 7.0,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<p>Ce miroir est un <strong>miroir triptyque d'inspiration Hollywood Regency années 30</strong>. Ses 3 panneaux articulés encadrés de moulures dorées sculptées et surmontés d'un fronton floral raffiné créent une composition baroque glamour qui transforme n'importe quelle coiffeuse en pièce de théâtre. Usage mural ou coiffeuse libre.</p>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/01.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse_Pose.png?v=1786616762",
+          "bytes": 1995091,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse Pose"
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse_Moderne.png?v=1786616796",
+          "bytes": 1795452,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse Moderne"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse_Vintage.png?v=1786616895",
+          "bytes": 2097533,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse  Vintage"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse_Moderne_Pose.png?v=1786616845",
+          "bytes": 2165020,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse Moderne Pose"
+        },
+        {
+          "index": 5,
+          "filename": "05.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/05.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse_Chambre.png?v=1786616877",
+          "bytes": 2033271,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse Chambre"
+        },
+        {
+          "index": 6,
+          "filename": "06.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/06.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Coiffeuse.png?v=1786616912",
+          "bytes": 1231178,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Coiffeuse "
+        },
+        {
+          "index": 7,
+          "filename": "07.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/07.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Zoom.png?v=1786616925",
+          "bytes": 1842645,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Zoom"
+        },
+        {
+          "index": 8,
+          "filename": "08.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/08.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Zoom_Panneau.png?v=1786616944",
+          "bytes": 1874048,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Zoom Panneau"
+        },
+        {
+          "index": 9,
+          "filename": "09.png",
+          "path": "images/miroir-vintage-triptyque-dore-coiffeuse/09.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Vintage_Triptyque_Dor_Zoom_Dorure.png?v=1786616959",
+          "bytes": 2293943,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Vintage Triptyque Doré Zoom Dorure"
+        }
+      ],
+      "published_at": "2026-08-26T19:26:33+02:00",
+      "created_at": "2026-07-29T18:57:22+02:00",
+      "updated_at": "2026-08-31T15:24:40+02:00"
+    },
+    {
+      "source_handle": "miroir-mural-venitien-verre-grave-main-motifs-floraux",
+      "source_url": "https://miroirsdesign.fr/products/miroir-mural-venitien-verre-grave-main-motifs-floraux",
+      "title": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Title"
+      ],
+      "variants": [
+        {
+          "id": 58436081353052,
+          "title": "Default Title",
+          "price": "674.90",
+          "compare_at_price": "293.48",
+          "sku": "14:200006151#60 90CM",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 6000,
+          "weight": 6.0,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<p>Ce <strong>miroir vénitien mural</strong> incarne l'élégance des palais de la Cité des Doges. Son <strong>cadre entièrement en verre découpé et gravé à la main </strong>reproduit les techniques ancestrales de Murano, motifs floraux, feuillages ciselés, bordures biseautées individuellement et son fronton sculpté en couronne confère une prestance majestueuse.</p>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/01.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Entree.png?v=1786036737",
+          "bytes": 1994419,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Entree"
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Salle_De_Bain.png?v=1786036756",
+          "bytes": 2136889,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Salle De Bain"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Chambre.png?v=1786036770",
+          "bytes": 1877254,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Chambre"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Couloir.png?v=1786036990",
+          "bytes": 1828423,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Couloir"
+        },
+        {
+          "index": 5,
+          "filename": "05.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/05.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Buffet.png?v=1786036784",
+          "bytes": 2030676,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Buffet"
+        },
+        {
+          "index": 6,
+          "filename": "06.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/06.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Se_Regarde.png?v=1786036809",
+          "bytes": 2132502,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Se Regarde"
+        },
+        {
+          "index": 7,
+          "filename": "07.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/07.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Installer.png?v=1786036858",
+          "bytes": 1926619,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Installer"
+        },
+        {
+          "index": 8,
+          "filename": "08.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/08.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Coller_Au_Mur.png?v=1786036882",
+          "bytes": 1640434,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Coller Au Mur"
+        },
+        {
+          "index": 9,
+          "filename": "09.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/09.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Tamise.png?v=1786036901",
+          "bytes": 2089421,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Tamise"
+        },
+        {
+          "index": 10,
+          "filename": "10.png",
+          "path": "images/miroir-mural-venitien-verre-grave-main-motifs-floraux/10.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Mural_V_nitien_Verre_Grav_Main_Motifs_Floraux_Deballage.png?v=1786036921",
+          "bytes": 2220644,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Mural Vénitien Verre Gravé Main Motifs Floraux Deballage"
+        }
+      ],
+      "published_at": "2026-08-06T19:26:26+02:00",
+      "created_at": "2026-07-27T18:28:38+02:00",
+      "updated_at": "2026-08-31T15:24:42+02:00"
+    },
+    {
+      "source_handle": "miroir-triptyque-dore-90-60-cm",
+      "source_url": "https://miroirsdesign.fr/products/miroir-triptyque-dore-90-60-cm",
+      "title": "Miroir Triptyque Doré 90×60 cm",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Title"
+      ],
+      "variants": [
+        {
+          "id": 58534491259228,
+          "title": "Default Title",
+          "price": "890.90",
+          "compare_at_price": "389.94",
+          "sku": "14:350686#silver;5:202532812#90X60cm",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 15000,
+          "weight": 15.0,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<p><meta charset=\"utf-8\"><span>Ce <strong>miroir triptyque doré</strong> définit un mur autant qu'il le décore. Ses 3 panneaux articulés en </span><strong>cadre acier inoxydable électroplaqué doré</strong><span>, son arche centrale bombée Art Déco et ses volets latéraux en courbes douces composent une silhouette héritée des ateliers parisiens des années 1920. Fixation murale directe, volets repliables, glace verre argenté. Salon, entrée, salle de bain.</span></p>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/01.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_90_60_cm_Maquillage.png?v=1787777672",
+          "bytes": 2115467,
+          "content_type": "image/png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Femme se maquillant devant un miroir triptyque doré à volets orientables, posé sur une coiffeuse en bois."
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_Salle_De_Bain.png?v=1786032962",
+          "bytes": 1804249,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Salle De Bain"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_Chambre.png?v=1786032976",
+          "bytes": 1982859,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Chambre"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_Dressing.png?v=1786032994",
+          "bytes": 1905750,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Dressing"
+        },
+        {
+          "index": 5,
+          "filename": "05.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/05.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_Se_Regarder.png?v=1786033050",
+          "bytes": 1848300,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Se Regarder"
+        },
+        {
+          "index": 6,
+          "filename": "06.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/06.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_Zoomer.png?v=1786033112",
+          "bytes": 1562517,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Zoomer"
+        },
+        {
+          "index": 7,
+          "filename": "07.png",
+          "path": "images/miroir-triptyque-dore-90-60-cm/07.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Dor_D_baller.png?v=1786033161",
+          "bytes": 1867440,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Doré Déballer"
+        }
+      ],
+      "published_at": "2026-08-06T18:22:52+02:00",
+      "created_at": "2026-08-03T16:01:40+02:00",
+      "updated_at": "2026-08-31T15:24:45+02:00"
+    },
+    {
+      "source_handle": "miroir-triptyque-pliable-coiffeuse",
+      "source_url": "https://miroirsdesign.fr/products/miroir-triptyque-pliable-coiffeuse",
+      "title": "Miroir Triptyque Pliable Coiffeuse",
+      "vendor": "Miroirs Design",
+      "product_type": "",
+      "tags": "",
+      "option_names": [
+        "Couleur"
+      ],
+      "variants": [
+        {
+          "id": 58533920047452,
+          "title": "Noir",
+          "price": "445.90",
+          "compare_at_price": "293.96",
+          "sku": "14:29#80x60cm black",
+          "option1": "Noir",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 13000,
+          "weight": 13.0,
+          "weight_unit": "kg"
+        },
+        {
+          "id": 58533919981916,
+          "title": "Or",
+          "price": "445.90",
+          "compare_at_price": "293.96",
+          "sku": "14:10#80x60cm golden",
+          "option1": "Or",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 13000,
+          "weight": 13.0,
+          "weight_unit": "kg"
+        },
+        {
+          "id": 58533920014684,
+          "title": "Blanc",
+          "price": "445.90",
+          "compare_at_price": "293.96",
+          "sku": "14:366#80x60cm white",
+          "option1": "Blanc",
+          "option2": null,
+          "option3": null,
+          "available": null,
+          "grams": 13000,
+          "weight": 13.0,
+          "weight_unit": "kg"
+        }
+      ],
+      "body_html": "<p>Ce<strong> miroir triptyque pliable coiffeuse </strong>incarne l'élégance Art Déco des années folles. Son panneau central en arche généreuse et ses deux volets latéraux articulés en <strong>cadre acier inoxydable noir, blanc ou doré </strong>offrent une vision panoramique multi-angles pour le maquillage et la coiffure. Charnières métal robustes. Pose sur meuble ou fixation murale.</p>",
+      "images": [
+        {
+          "index": 1,
+          "filename": "01.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/01.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Noir_Chambre.png?v=1786718865",
+          "bytes": 2210954,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse"
+        },
+        {
+          "index": 2,
+          "filename": "02.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/02.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Dor.png?v=1786718882",
+          "bytes": 2010842,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Doré"
+        },
+        {
+          "index": 3,
+          "filename": "03.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/03.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Argent.png?v=1786718898",
+          "bytes": 2079174,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Argenté"
+        },
+        {
+          "index": 4,
+          "filename": "04.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/04.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Noir_Porte_pli.png?v=1786713614",
+          "bytes": 1617859,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Noir Porte plié"
+        },
+        {
+          "index": 5,
+          "filename": "05.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/05.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Noir_Zoom_Arche.png?v=1786718931",
+          "bytes": 1492729,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Noir Zoom Arche"
+        },
+        {
+          "index": 6,
+          "filename": "06.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/06.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Noir_Pliable.png?v=1786718950",
+          "bytes": 1575031,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Noir Pliable"
+        },
+        {
+          "index": 7,
+          "filename": "07.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/07.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Coiffeuse_Noir_Tamis.png?v=1786718965",
+          "bytes": 1690484,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable Coiffeuse Noir Tamisé"
+        },
+        {
+          "index": 8,
+          "filename": "08.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/08.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Sur_Coiffeuse_Noir_Chambre.png?v=1786718988",
+          "bytes": 1961607,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable  Sur Coiffeuse Noir Chambre"
+        },
+        {
+          "index": 9,
+          "filename": "09.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/09.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Sur_Coiffeuse_Noir.png?v=1786719004",
+          "bytes": 1850362,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable  Sur Coiffeuse Noir "
+        },
+        {
+          "index": 10,
+          "filename": "10.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/10.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Sur_Coiffeuse_Maquillage.png?v=1786719034",
+          "bytes": 1924253,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable  Sur Coiffeuse Maquillage"
+        },
+        {
+          "index": 11,
+          "filename": "11.png",
+          "path": "images/miroir-triptyque-pliable-coiffeuse/11.png",
+          "src": "https://cdn.shopify.com/s/files/1/1022/0270/4220/files/Miroir_Triptyque_Pliable_Sur_Coiffeuse_Cote_Arche.png?v=1786719060",
+          "bytes": 1863740,
+          "content_type": "image/png",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Miroir Triptyque Pliable  Sur Coiffeuse Cote Arche"
+        }
+      ],
+      "published_at": "2026-08-26T19:24:37+02:00",
+      "created_at": "2026-08-03T15:22:04+02:00",
+      "updated_at": "2026-08-31T15:24:47+02:00"
+    }
+  ]
+}
