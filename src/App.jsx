@@ -141,7 +141,7 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
           />
           <div className="product-stage-media">
             {outgoing && (
-              <div className="product-stage-layer" aria-hidden="true">
+              <div className="product-stage-layer outgoing" aria-hidden="true">
                 <ProductMedia src={outgoing} />
               </div>
             )}
