@@ -50,6 +50,7 @@ function ProductMedia({ src }) {
 function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
   const [active, setActive] = useState(0)
   const [outgoing, setOutgoing] = useState(null)
+  const [slideDir, setSlideDir] = useState(1)
   const thumbsRef = useRef(null)
   const src = PRODUCT_IMAGES[active]
 
@@ -57,7 +58,10 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
     if (i === active) return
     const mobile = window.matchMedia('(max-width: 1024px)').matches
     const motion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (mobile && motion) setOutgoing(PRODUCT_IMAGES[active])
+    if (mobile && motion) {
+      setOutgoing(PRODUCT_IMAGES[active])
+      setSlideDir(i > active ? 1 : -1)
+    }
     setActive(i)
   }
 
@@ -143,7 +147,9 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
             )}
             <div
               key={src}
-              className={`product-stage-layer${outgoing ? ' fade-blur' : ''}`}
+              className={`product-stage-layer${
+                outgoing ? (slideDir === 1 ? ' card-next' : ' card-prev') : ''
+              }`}
               onAnimationEnd={() => setOutgoing(null)}
             >
               <ProductMedia src={src} />
