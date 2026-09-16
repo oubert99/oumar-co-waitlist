@@ -27,12 +27,14 @@ const PRODUCT_IMAGES = [
   FRONT_SRC,
   BACK_SRC,
   CLOSE_UP_SRC,
-  asset('image2.jpg'),
-  asset('image3.jpg'),
-  asset('image4.jpg'),
-  asset('image5.jpg'),
-  asset('image6.jpg'),
-  asset('image7bis.jpg'),
+  asset('Shooting/1.png'),
+  asset('Shooting/3.png'),
+  asset('Shooting/7.png'),
+  asset('Shooting/71.png'),
+  asset('Shooting/78.png'),
+  asset('Shooting/92.png'),
+  asset('Shooting/94.png'),
+  asset('Shooting/96.png'),
 ]
 
 const MARQUEE_SEQUENCE = [FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC]
