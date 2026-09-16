@@ -748,6 +748,14 @@ body:has(.view-terms) {
   display: flex;
 }
 
+.view-play .back-btn {
+  background: var(--page-bg);
+}
+
+.view-play .back-btn:hover {
+  background: var(--page-bg);
+}
+
 .view-details .logo,
 .view-about .logo,
 .view-terms .logo {
@@ -783,9 +791,9 @@ body:has(.view-terms) {
   align-items: center;
   gap: 1rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid #e2e2e2;
+  border: none;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--page-bg);
   font-size: 0.8rem;
   font-weight: 500;
 }
