@@ -49,13 +49,13 @@ function ProductMedia({ src }) {
 
 function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
   const [active, setActive] = useState(0)
-  const [slideDir, setSlideDir] = useState(0)
   const thumbsRef = useRef(null)
+  const hasChangedImage = useRef(false)
   const src = PRODUCT_IMAGES[active]
 
   function selectImage(i) {
     if (i === active) return
-    setSlideDir(i > active ? 1 : -1)
+    hasChangedImage.current = true
     setActive(i)
   }
 
@@ -135,7 +135,7 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
           />
           <div
             key={src}
-            className={`product-stage-media${slideDir === 1 ? ' slide-next' : slideDir === -1 ? ' slide-prev' : ''}`}
+            className={`product-stage-media${hasChangedImage.current ? ' fade-blur' : ''}`}
           >
             <ProductMedia src={src} />
           </div>
