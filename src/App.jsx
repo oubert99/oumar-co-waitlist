@@ -24,27 +24,70 @@ function InstagramIcon() {
 }
 
 const LOOK_STAGE_SRC = asset('Shooting/3.png')
+const SHOOT_1 = asset('Shooting/1.png')
+const SHOOT_7 = asset('Shooting/7.png')
+const SHOOT_71 = asset('Shooting/71.png')
+const SHOOT_78 = asset('Shooting/78.png')
+const SHOOT_92 = asset('Shooting/92.png')
+const SHOOT_94 = asset('Shooting/94.png')
+const SHOOT_96 = asset('Shooting/96.png')
 
 const PRODUCT_IMAGES = [
   FRONT_SRC,
   BACK_SRC,
   CLOSE_UP_SRC,
-  asset('Shooting/1.png'),
+  SHOOT_1,
   LOOK_STAGE_SRC,
-  asset('Shooting/7.png'),
-  asset('Shooting/71.png'),
-  asset('Shooting/78.png'),
-  asset('Shooting/92.png'),
-  asset('Shooting/94.png'),
-  asset('Shooting/96.png'),
+  SHOOT_7,
+  SHOOT_71,
+  SHOOT_78,
+  SHOOT_92,
+  SHOOT_94,
+  SHOOT_96,
 ]
+
+// Face centers as % of the source photo (Vision). A light zoom/pan keeps
+// the face near one spot in the 3:4 stage without cropping the jacket off.
+const LOOK_FACE = {
+  [SHOOT_1]: { x: 57.0, y: 26.2 },
+  [LOOK_STAGE_SRC]: { x: 49.3, y: 21.5 },
+  [SHOOT_7]: { x: 47.9, y: 16.1 },
+  [SHOOT_71]: { x: 38.6, y: 28.8 },
+  [SHOOT_78]: { x: 44.1, y: 18.3 },
+  [SHOOT_92]: { x: 52.4, y: 20.6 },
+  [SHOOT_94]: { x: 40.0, y: 20.9 },
+  [SHOOT_96]: { x: 47.0, y: 17.6 },
+}
+
+const LOOK_FACE_TARGET = { x: 0.48, y: 0.2 }
+const LOOK_FACE_SCALE = 1.12
+
+function lookFaceStyle(src) {
+  const face = LOOK_FACE[src]
+  if (!face) return undefined
+
+  const scale = LOOK_FACE_SCALE
+  const maxShift = (scale - 1) / 2
+  const shiftX = Math.max(
+    -maxShift,
+    Math.min(maxShift, LOOK_FACE_TARGET.x - 0.5 - (face.x / 100 - 0.5) * scale),
+  )
+  const shiftY = Math.max(
+    -maxShift,
+    Math.min(maxShift, LOOK_FACE_TARGET.y - 0.5 - (face.y / 100 - 0.5) * scale),
+  )
+
+  return {
+    transform: `translate(${(shiftX * 100).toFixed(2)}%, ${(shiftY * 100).toFixed(2)}%) scale(${scale})`,
+  }
+}
 
 const MARQUEE_SEQUENCE = [FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC]
 
-function ProductMedia({ src }) {
+function ProductMedia({ src, faceAlign = false }) {
   const isJacket = src === FRONT_SRC || src === BACK_SRC
   if (isJacket) return <JacketArt src={src} />
-  return <img src={src} alt="" draggable={false} />
+  return <img src={src} alt="" draggable={false} style={faceAlign ? lookFaceStyle(src) : undefined} />
 }
 
 function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
@@ -127,7 +170,7 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
             draggable={false}
           />
           <div className="product-stage-media">
-            <ProductMedia src={src} />
+            <ProductMedia src={src} faceAlign />
           </div>
         </div>
 

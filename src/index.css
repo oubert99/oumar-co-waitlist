@@ -479,6 +479,7 @@ body:has(.view-terms) {
 
 .product-stage.look .product-stage-media img {
   object-fit: cover;
+  transform-origin: center center;
 }
 
 .product-stage-media .jacket-art .jacket-base,
