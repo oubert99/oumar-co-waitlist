@@ -721,9 +721,9 @@ body:has(.view-terms) {
   align-items: center;
   gap: 0.35rem;
   padding: 0.5rem 0.85rem;
-  border: 1px solid #e2e2e2;
-  background: rgba(255, 255, 255, 0.9);
-  color: #171717;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #fff;
   font-family: inherit;
   font-size: 0.8rem;
   font-weight: 500;
@@ -733,8 +733,8 @@ body:has(.view-terms) {
 }
 
 .back-btn:hover {
-  background: #fff;
-  border-color: #ccc;
+  background: #333;
+  border-color: #333;
 }
 
 .back-btn svg {
@@ -748,13 +748,6 @@ body:has(.view-terms) {
   display: flex;
 }
 
-.view-play .back-btn {
-  background: var(--page-bg);
-}
-
-.view-play .back-btn:hover {
-  background: var(--page-bg);
-}
 
 .view-details .logo,
 .view-about .logo,
@@ -1016,7 +1009,7 @@ body:has(.view-terms) {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.88);
+  background: var(--page-bg);
   backdrop-filter: blur(8px);
 }
 
@@ -1063,7 +1056,7 @@ body:has(.view-terms) {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--page-bg);
   backdrop-filter: blur(8px);
   padding: 1.5rem;
   text-align: center;

@@ -8,7 +8,7 @@ const FRONT_SRC = asset('front.png')
 const BACK_SRC = asset('back.png')
 const LOGO_SRC = asset('logo-noir.png')
 const ABOUT_SRC = asset('FINAL FANTASY - 00000001.jpg')
-const INSTAGRAM_HANDLE = 'nooo.ooe'
+const INSTAGRAM_HANDLE = 'oumarbrand'
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`
 
 const HOME_VIEW = 'details'
