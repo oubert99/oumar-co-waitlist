@@ -7,6 +7,7 @@
   --gallery-slide-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --gallery-slide-duration: 0.48s;
   --gallery-outgoing-dim: 0.28;
+  --page-bg: #fffcf5;
 }
 
 *,
@@ -22,12 +23,13 @@ body,
 #root {
   min-height: 100vh;
   overflow-x: hidden;
+  background: var(--page-bg);
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #171717;
-  background: #fff;
+  background: var(--page-bg);
   overflow: hidden;
 }
 
@@ -137,7 +139,7 @@ body:has(.view-terms) {
   position: fixed;
   inset: 0;
   z-index: 55;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 252, 245, 0.97);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +162,7 @@ body:has(.view-terms) {
   position: fixed;
   inset: 0;
   z-index: 4;
-  background: #fff;
+  background: var(--page-bg);
   overflow: hidden;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
@@ -347,7 +349,7 @@ body:has(.view-terms) {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background: var(--page-bg);
   padding: 1rem 1.5rem 2rem;
 }
 
@@ -450,7 +452,7 @@ body:has(.view-terms) {
   min-height: 0;
   display: block;
   overflow: hidden;
-  background: #fff;
+  background: var(--page-bg);
 }
 
 .product-stage.studio {
@@ -475,7 +477,7 @@ body:has(.view-terms) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: var(--page-bg);
 }
 
 .product-stage.studio .product-stage-layer {
@@ -613,7 +615,7 @@ body:has(.view-terms) {
   z-index: 1;
   width: 100%;
   max-width: 100%;
-  background: #fff;
+  background: var(--page-bg);
   padding: 1rem 2rem 3rem;
   overflow-x: hidden;
 }
@@ -672,7 +674,7 @@ body:has(.view-terms) {
   z-index: 1;
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background: var(--page-bg);
   padding: 1rem 2rem 2rem;
   max-width: 720px;
   margin: 0 auto;
@@ -1113,7 +1115,7 @@ body:has(.view-terms) {
   position: relative;
   z-index: 1;
   width: 100%;
-  background: #fafafa;
+  background: var(--page-bg);
   border-top: 1px solid #e8e8e8;
   padding: 2rem 2rem 1.5rem;
   display: none;
