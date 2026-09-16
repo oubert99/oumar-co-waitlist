@@ -1467,33 +1467,37 @@ body:has(.view-terms) {
   }
 
   .product-stage-media.slide-next {
-    animation: product-slide-next 0.28s ease-out;
+    animation: product-slide-next 0.32s ease-in;
   }
 
   .product-stage-media.slide-prev {
-    animation: product-slide-prev 0.28s ease-out;
+    animation: product-slide-prev 0.32s ease-in;
   }
 }
 
 @keyframes product-slide-next {
   from {
     transform: translateX(14%);
-    opacity: 0.4;
+    opacity: 0.45;
+    filter: blur(10px);
   }
   to {
     transform: translateX(0);
     opacity: 1;
+    filter: blur(0);
   }
 }
 
 @keyframes product-slide-prev {
   from {
     transform: translateX(-14%);
-    opacity: 0.4;
+    opacity: 0.45;
+    filter: blur(10px);
   }
   to {
     transform: translateX(0);
     opacity: 1;
+    filter: blur(0);
   }
 }
 
