@@ -49,13 +49,15 @@ function ProductMedia({ src }) {
 
 function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
   const [active, setActive] = useState(0)
+  const [outgoing, setOutgoing] = useState(null)
   const thumbsRef = useRef(null)
-  const hasChangedImage = useRef(false)
   const src = PRODUCT_IMAGES[active]
 
   function selectImage(i) {
     if (i === active) return
-    hasChangedImage.current = true
+    const mobile = window.matchMedia('(max-width: 1024px)').matches
+    const motion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (mobile && motion) setOutgoing(PRODUCT_IMAGES[active])
     setActive(i)
   }
 
@@ -133,11 +135,19 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
             aria-hidden="true"
             draggable={false}
           />
-          <div
-            key={src}
-            className={`product-stage-media${hasChangedImage.current ? ' fade-blur' : ''}`}
-          >
-            <ProductMedia src={src} />
+          <div className="product-stage-media">
+            {outgoing && (
+              <div className="product-stage-layer" aria-hidden="true">
+                <ProductMedia src={outgoing} />
+              </div>
+            )}
+            <div
+              key={src}
+              className={`product-stage-layer${outgoing ? ' fade-blur' : ''}`}
+              onAnimationEnd={() => setOutgoing(null)}
+            >
+              <ProductMedia src={src} />
+            </div>
           </div>
         </div>
 

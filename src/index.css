@@ -466,6 +466,14 @@ body:has(.view-terms) {
   justify-content: center;
 }
 
+.product-stage-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .product-stage-media img,
 .product-stage-media .jacket-art {
   width: 100%;
@@ -1466,15 +1474,15 @@ body:has(.view-terms) {
     transform: rotate(-90deg);
   }
 
-  .product-stage-media.fade-blur {
-    animation: product-fade-blur 0.32s ease-in;
+  .product-stage-layer.fade-blur {
+    animation: product-fade-blur 0.55s ease-out;
   }
 }
 
 @keyframes product-fade-blur {
   from {
-    opacity: 0.35;
-    filter: blur(10px);
+    opacity: 0.78;
+    filter: blur(4px);
   }
   to {
     opacity: 1;
@@ -1483,7 +1491,7 @@ body:has(.view-terms) {
 }
 
 @media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
-  .product-stage-media.fade-blur {
+  .product-stage-layer.fade-blur {
     animation: none;
   }
 }
