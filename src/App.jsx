@@ -23,12 +23,14 @@ function InstagramIcon() {
   )
 }
 
+const LOOK_STAGE_SRC = asset('Shooting/3.png')
+
 const PRODUCT_IMAGES = [
   FRONT_SRC,
   BACK_SRC,
   CLOSE_UP_SRC,
   asset('Shooting/1.png'),
-  asset('Shooting/3.png'),
+  LOOK_STAGE_SRC,
   asset('Shooting/7.png'),
   asset('Shooting/71.png'),
   asset('Shooting/78.png'),
@@ -119,7 +121,7 @@ function ProductPage({ email, setEmail, onSubmit, submitting, formError }) {
         >
           <img
             className="product-stage-sizer"
-            src={FRONT_SRC}
+            src={LOOK_STAGE_SRC}
             alt=""
             aria-hidden="true"
             draggable={false}
