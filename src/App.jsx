@@ -27,16 +27,12 @@ const PRODUCT_IMAGES = [
   FRONT_SRC,
   BACK_SRC,
   CLOSE_UP_SRC,
-  ABOUT_SRC,
-  asset('FINAL FANTASY - 00000012.jpg'),
-  asset('FINAL FANTASY - 00000004.jpg'),
-  asset('FINAL FANTASY - 00000005.jpg'),
-  asset('FINAL FANTASY - 00000006.jpg'),
-  asset('FINAL FANTASY - 00000007.jpg'),
-  asset('FINAL FANTASY - 00000008.jpg'),
-  asset('FINAL FANTASY - 00000009.jpg'),
-  asset('FINAL FANTASY - 00000010.jpg'),
-  asset('FINAL FANTASY - 00000011.jpg'),
+  asset('image2.jpg'),
+  asset('image3.jpg'),
+  asset('image4.jpg'),
+  asset('image5.jpg'),
+  asset('image6.jpg'),
+  asset('image7bis.jpg'),
 ]
 
 const MARQUEE_SEQUENCE = [FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC, FRONT_SRC, BACK_SRC]
